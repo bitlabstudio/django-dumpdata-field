@@ -15,7 +15,8 @@ class LoaddataFieldTestCase(TestCase):
         DummyModel.objects.create(field1=3, field2='foobar', field3=True)
         DummyModel.objects.create(field1=4, field2='barfoo', field3=False)
         f = tempfile.NamedTemporaryFile(delete=False)
-        f.write('[{"field2": "foo", "pk": 1, "field1": 1}, {"field2": "bar", "pk": 666, "field1": 2}]')  # NOQA
+        f.write('[{"field2": "foo", "pk": 1, "field1": 1},'
+                ' {"field2": "bar", "pk": 666, "field1": 2}]')
         f.close()
         command = Command()
         result = command.handle('test_app.DummyModel', f.name)

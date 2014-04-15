@@ -1,10 +1,9 @@
 """Management command that imports certain fields of a model from JSON."""
 import json
-from optparse import make_option
 
 from django.core.exceptions import ObjectDoesNotExist
 from django.contrib.contenttypes.models import ContentType
-from django.core.management.base import BaseCommand, CommandError
+from django.core.management.base import BaseCommand
 
 
 class Command(BaseCommand):

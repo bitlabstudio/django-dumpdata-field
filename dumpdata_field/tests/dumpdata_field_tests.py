@@ -16,6 +16,7 @@ class DumpdataFieldTestCase(TestCase):
         result = command.handle('test_app.DummyModel', fields='field1,field2')
         self.assertEqual(
             result,
-            '[{"field2": "foo", "pk": 1, "field1": 1}, {"field2": "bar", "pk": 2, "field1": 2}]',  # NOQA
+            ('[{"field2": "foo", "pk": 1, "field1": 1},'
+             ' {"field2": "bar", "pk": 2, "field1": 2}]'),
             msg=('Should return correct JSON string'),
         )
