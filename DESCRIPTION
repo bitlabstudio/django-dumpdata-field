@@ -1,0 +1,1 @@
+custom dumpdata and loaddata commands that allow to export given fields of a model

@@ -1,0 +1,9 @@
+include AUTHORS
+include LICENSE
+include DESCRIPTION
+include CHANGELOG.txt
+include README.md
+graft dumpdata_field
+global-exclude *.orig *.pyc *.log *.swp
+prune dumpdata_field/tests/coverage
+prune dumpdata_field/.ropeproject
